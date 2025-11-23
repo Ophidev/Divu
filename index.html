@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌹</text></svg>">
+<title>Happy Birthday Divya 💖✨</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+/* -------------------------------------------------------
+   GLOBAL STYLES
+--------------------------------------------------------*/
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Poppins',sans-serif;
+  background:#0a0015;
+  overflow-x:hidden;
+  color:white;
+  position:relative;
+}
+
+/* Romantic floating hearts background */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    linear-gradient(135deg, #1a0028 0%, #2d0a3f 25%, #4a1458 50%, #2d0a3f 75%, #1a0028 100%);
+  animation:bgShift 20s ease-in-out infinite;
+  z-index:-2;
+}
+
+@keyframes bgShift{
+  0%, 100%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+}
+
+/* Floating hearts in background */
+.bg-hearts{
+  position:fixed;
+  inset:0;
+  overflow:hidden;
+  z-index:-1;
+  pointer-events:none;
+}
+
+.floating-heart{
+  position:absolute;
+  font-size:30px;
+  opacity:0.15;
+  animation:floatHeart 15s ease-in-out infinite;
+}
+
+@keyframes floatHeart{
+  0%{transform:translateY(100vh) rotate(0deg) scale(0.5);opacity:0;}
+  10%{opacity:0.15;}
+  90%{opacity:0.15;}
+  100%{transform:translateY(-100px) rotate(360deg) scale(1);opacity:0;}
+}
+
+/* Sparkle effect */
+.sparkle{
+  position:fixed;
+  width:3px;
+  height:3px;
+  background:white;
+  border-radius:50%;
+  pointer-events:none;
+  animation:sparkleAnim 2s ease-in-out infinite;
+  z-index:1;
+}
+
+@keyframes sparkleAnim{
+  0%, 100%{opacity:0;transform:scale(0);}
+  50%{opacity:1;transform:scale(1);}
+}
+
+.wrap{max-width:1100px;margin:20px auto;padding:20px;}
+header{text-align:center;margin-bottom:30px;}
+h1{
+  font-family:'Pacifico',cursive;
+  font-size:42px;
+  color:#ffc4e8;
+  text-shadow:0 0 20px rgba(255,120,200,0.8), 0 0 40px rgba(255,120,200,0.4);
+  margin-bottom:10px;
+  animation:titleGlow 3s ease-in-out infinite;
+}
+
+@keyframes titleGlow{
+  0%, 100%{text-shadow:0 0 20px rgba(255,120,200,0.8), 0 0 40px rgba(255,120,200,0.4);}
+  50%{text-shadow:0 0 30px rgba(255,120,200,1), 0 0 60px rgba(255,120,200,0.6);}
+}
+
+.lead{
+  color:#ffb3e0;
+  font-size:16px;
+  font-weight:300;
+}
+
+/* -------------------------------------------------------
+   MAGIC STAGE
+--------------------------------------------------------*/
+.stage{
+  position:relative;
+  height:450px;
+  background:linear-gradient(135deg, rgba(138,43,226,0.1) 0%, rgba(255,105,180,0.1) 100%);
+  border-radius:30px;
+  box-shadow:0 20px 60px rgba(255,105,180,0.3), inset 0 0 50px rgba(255,255,255,0.05);
+  overflow:hidden;
+  margin-top:20px;
+  border:1px solid rgba(255,182,193,0.3);
+}
+
+/* butterflies */
+.butterfly{
+  position:absolute;
+  font-size:45px;
+  animation:fly 8s ease-in-out infinite;
+  filter:drop-shadow(0 0 10px rgba(255,182,193,0.6));
+}
+@keyframes fly{
+  0%{transform:translateY(0) translateX(0) rotate(0deg);}
+  25%{transform:translateY(-80px) translateX(40px) rotate(10deg);}
+  50%{transform:translateY(-120px) translateX(80px) rotate(-10deg);}
+  75%{transform:translateY(-60px) translateX(120px) rotate(10deg);}
+  100%{transform:translateY(0) translateX(160px) rotate(0deg);}
+}
+
+.petal{
+  position:absolute;
+  font-size:26px;
+  animation:petalFall 7s linear forwards;
+  filter:drop-shadow(0 0 8px rgba(255,182,193,0.6));
+}
+@keyframes petalFall{
+  0%{transform:translateY(0) rotate(0);opacity:1;}
+  100%{transform:translateY(400px) rotate(180deg);opacity:0;}
+}
+
+/* Big heart button */
+.bigHeart{
+  width:180px;height:180px;
+  background:linear-gradient(135deg,#ff1493,#ff69b4,#ff1493);
+  background-size:200% 200%;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:80px;
+  position:absolute;left:50%;top:50%;
+  transform:translate(-50%,-50%);
+  cursor:pointer;
+  animation:pulseHeart 2s infinite, gradientMove 3s ease infinite;
+  box-shadow:0 20px 60px rgba(255,20,147,0.5), 0 0 40px rgba(255,105,180,0.4);
+  z-index:5;
+  border:3px solid rgba(255,255,255,0.3);
+}
+@keyframes pulseHeart{
+  0%{transform:translate(-50%,-50%) scale(1);}
+  50%{transform:translate(-50%,-50%) scale(1.15);}
+  100%{transform:translate(-50%,-50%) scale(1);}
+}
+@keyframes gradientMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+.ring{
+  position:absolute;
+  left:50%;top:50%;
+  width:40px;height:40px;
+  border:4px solid #ffc4e8;
+  border-radius:50%;
+  transform:translate(-50%,-50%) scale(0);
+  opacity:0;
+  box-shadow:0 0 20px rgba(255,196,232,0.8);
+}
+
+.cake{
+  position:absolute;
+  font-size:140px;
+  left:50%;top:150%;
+  transform:translateX(-50%);
+  opacity:0;
+  transition:1.2s;
+  z-index:5;
+  filter:drop-shadow(0 10px 30px rgba(255,105,180,0.6));
+}
+
+.balloon{
+  position:absolute;
+  font-size:70px;
+  bottom:-120px;
+  animation:balloonRise 8s linear forwards;
+  filter:drop-shadow(0 5px 15px rgba(255,105,180,0.4));
+}
+@keyframes balloonRise{
+  0%{transform:translateY(0) scale(0.8) rotate(0deg);opacity:0;}
+  20%{opacity:1;}
+  100%{transform:translateY(-900px) scale(1.1) rotate(15deg);opacity:0;}
+}
+
+.confetti{
+  position:absolute;
+  width:12px;height:16px;
+  background:var(--c);
+  animation:confFall 5s linear forwards;
+  border-radius:2px;
+}
+@keyframes confFall{
+  0%{transform:translateY(0) rotate(0);opacity:1;}
+  100%{transform:translateY(450px) rotate(180deg);opacity:0;}
+}
+
+/* -------------------------------------------------------
+   GALLERY
+--------------------------------------------------------*/
+.gallery{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+  gap:25px;
+}
+.card{
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 15px 40px rgba(255,105,180,0.3);
+  cursor:pointer;
+  transition:transform 0.3s ease, box-shadow 0.3s ease;
+  position:relative;
+  background:linear-gradient(135deg, rgba(138,43,226,0.1), rgba(255,105,180,0.1));
+  border:2px solid rgba(255,182,193,0.3);
+  animation:floatPic 6s ease-in-out infinite alternate;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 20px 50px rgba(255,105,180,0.5);
+}
+
+.card img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  display:block;
+}
+
+.big{
+  grid-column:span 2;
+}
+
+.big img{
+  height:350px;
+}
+
+@keyframes floatPic{
+  0%{transform:translateY(0);}
+  100%{transform:translateY(-10px);}
+}
+
+/* -------------------------------------------------------
+   MESSAGE HEART
+--------------------------------------------------------*/
+.msgHeart{
+  margin:40px auto;
+  width:90px;height:90px;
+  background:linear-gradient(135deg,#ff1493,#ff69b4);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:45px;
+  cursor:pointer;
+  animation:pulse2 2.5s infinite;
+  box-shadow:0 15px 40px rgba(255,20,147,0.4);
+  border:3px solid rgba(255,255,255,0.3);
+}
+@keyframes pulse2{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.12);}
+  100%{transform:scale(1);}
+}
+
+.msgCard{
+  position:fixed;
+  bottom:-100%;
+  left:0;right:0;
+  background:linear-gradient(135deg, rgba(138,43,226,0.95), rgba(255,105,180,0.95));
+  backdrop-filter:blur(20px);
+  padding:35px;
+  border-radius:30px 30px 0 0;
+  color:#fff;
+  box-shadow:0 -15px 50px rgba(0,0,0,0.5);
+  transition:0.8s;
+  font-size:16px;
+  line-height:1.8;
+  border-top:3px solid rgba(255,255,255,0.3);
+}
+.msgCard.show{bottom:0;}
+
+.closeMsg{
+  text-align:right;
+  font-size:28px;
+  cursor:pointer;
+  margin-bottom:15px;
+  color:#fff;
+  opacity:0.9;
+}
+
+.closeMsg:hover{
+  opacity:1;
+  transform:scale(1.1);
+}
+
+/* Fullscreen viewer */
+#fs{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.95);
+  align-items:center;
+  justify-content:center;
+  z-index:1000;
+  backdrop-filter:blur(10px);
+}
+#fs img{
+  max-width:90%;
+  max-height:90vh;
+  border-radius:15px;
+  box-shadow:0 20px 60px rgba(255,105,180,0.4);
+  border:3px solid rgba(255,182,193,0.3);
+}
+.fsClose{
+  position:absolute;
+  top:30px;
+  right:40px;
+  font-size:45px;
+  color:#ffc4e8;
+  cursor:pointer;
+  z-index:1001;
+  text-shadow:0 0 10px rgba(255,105,180,0.8);
+  transition:transform 0.2s;
+}
+.fsClose:hover{
+  transform:scale(1.2) rotate(90deg);
+}
+
+/* Responsive */
+@media(max-width:768px){
+  h1{font-size:32px;}
+  .gallery{grid-template-columns:1fr;}
+  .big{grid-column:span 1;}
+  .card img, .big img{height:250px;}
+}
+</style>
+</head>
+
+<body>
+<!-- Floating hearts background -->
+<div class="bg-hearts" id="bgHearts"></div>
+
+<div class="wrap">
+<header>
+  <h1>Happy Birthday Divya 🎀✨</h1>
+  <p class="lead">✨ Tap the big heart for a magical surprise ✨</p>
+</header>
+
+<!-- TOP MAGIC STAGE -->
+<div class="stage" id="stage">
+  <div class="bigHeart" id="bigHeart">💖</div>
+  <div class="cake" id="cake">🎂</div>
+
+  <!-- butterflies -->
+  <div class="butterfly" style="left:5%; top:60%; animation-delay:0s;">🦋</div>
+  <div class="butterfly" style="left:75%; top:70%; animation-delay:2s;">🦋</div>
+  <div class="butterfly" style="left:40%; top:80%; animation-delay:4s;">🦋</div>
+</div>
+
+<!-- GALLERY -->
+<div class="gallery">
+  <div class="card big" data-src="/3.jpg">
+    <img src="/3.jpg"  alt="Memory 1">
+  </div>
+  <div class="card" data-src="/2.png">
+    <img src="/2.png" alt="Memory 2">
+  </div>
+  <div class="card" data-src="/1.jpg">
+    <img src="/1.jpg" alt="Memory 3">
+  </div>
+  <div class="card" data-src="/4.jpg">
+    <img src="/4.jpg" alt="Memory 4">
+  </div>
+  <div class="card" data-src="/5.jpg">
+    <img src="/5.jpg" alt="Memory 5">
+  </div>
+</div>
+
+<!-- MESSAGE HEART -->
+<div class="msgHeart" id="msgHeart">💌</div>
+
+<!-- MESSAGE CARD -->
+<div class="msgCard" id="msgCard">
+  <div class="closeMsg" id="closeMsg">✖</div>
+  <strong style="font-size:20px;">Dear Divya,</strong><br><br>
+  Divya,
+I don’t know how to put this perfectly, but I’ll say it honestly.
+You’ve been a special part of my life ever since class 10 — even when we weren’t talking, even when life pulled us in different directions.
+Our situation may be complicated, and I know we only tried for a short time… but those moments mattered to me.
+And I’m really sorry for the distance I created and for anything that hurt you.
+You didn’t deserve confusion — you deserved clarity and respect.
+
+Today is your birthday, and I truly hope it’s filled with peace, happiness, and everything beautiful.
+You deserve joy that lasts, moments that make you smile, and people who appreciate you the way you should be appreciated.
+
+No matter where we stand now or where life takes us next, I’ll always be grateful that I had you — even for a little while.
+Happy Birthday, Divya.
+Stay blessed, stay happy, and keep shining the way you always do. ✨🎂💐
+And ab Thank You bol ke paraya mt kiya kr please 😒 and din se yhi kaam kr ra hun mai personal.
+  <br>
+  <b style="font-size:18px;">Happy Birthday, Divya 💖✨</b><br><br>
+  <em>— With love and apologies</em>
+</div>
+</div>
+
+<script>
+/* -----------------------------------------------
+   FLOATING HEARTS BACKGROUND
+------------------------------------------------*/
+const bgHearts = document.getElementById('bgHearts');
+function createFloatingHeart(){
+  const heart = document.createElement('div');
+  heart.className = 'floating-heart';
+  heart.innerHTML = ['💕','💖','💗','💝','💞'][Math.floor(Math.random()*5)];
+  heart.style.left = Math.random() * 100 + '%';
+  heart.style.animationDuration = (10 + Math.random() * 10) + 's';
+  heart.style.animationDelay = Math.random() * 5 + 's';
+  bgHearts.appendChild(heart);
+  
+  setTimeout(() => heart.remove(), 25000);
+}
+
+for(let i=0; i<15; i++){
+  setTimeout(() => createFloatingHeart(), i * 1500);
+}
+setInterval(createFloatingHeart, 3000);
+
+/* -----------------------------------------------
+   SPARKLES
+------------------------------------------------*/
+function createSparkle(){
+  const sparkle = document.createElement('div');
+  sparkle.className = 'sparkle';
+  sparkle.style.left = Math.random() * 100 + '%';
+  sparkle.style.top = Math.random() * 100 + '%';
+  sparkle.style.animationDelay = Math.random() * 2 + 's';
+  document.body.appendChild(sparkle);
+  
+  setTimeout(() => sparkle.remove(), 2000);
+}
+
+for(let i=0; i<20; i++){
+  setTimeout(() => createSparkle(), i * 200);
+}
+setInterval(createSparkle, 1000);
+
+/* -----------------------------------------------
+   MAGIC SURPRISE ANIMATION
+------------------------------------------------*/
+const bigHeart = document.getElementById("bigHeart");
+const stage = document.getElementById("stage");
+const cake = document.getElementById("cake");
+
+bigHeart.onclick = () => {
+  bigHeart.style.opacity = "0";
+  bigHeart.style.transform = "translate(-50%,-50%) scale(0)";
+  setTimeout(() => bigHeart.remove(), 600);
+
+  const ring = document.createElement("div");
+  ring.className = "ring";
+  stage.appendChild(ring);
+  ring.animate([
+    {transform:"translate(-50%,-50%) scale(0)", opacity:0},
+    {transform:"translate(-50%,-50%) scale(10)", opacity:1},
+    {transform:"translate(-50%,-50%) scale(15)", opacity:0}
+  ], {duration:1800, easing:"ease-out"});
+
+  setTimeout(()=>{
+    cake.style.top="50%";
+    cake.style.opacity="1";
+    cake.style.transform="translate(-50%,-50%) scale(1)";
+  },700);
+
+  // BALLOONS
+  const balloonEmojis = ['🎈','🎈','🎈','🎈','🎈'];
+  for(let i=0;i<70;i++){
+    setTimeout(()=>{
+      const b = document.createElement("div");
+      b.className="balloon";
+      b.innerHTML = balloonEmojis[Math.floor(Math.random()*balloonEmojis.length)];
+      b.style.left = (Math.random()*80+10)+"%";
+      stage.appendChild(b);
+      setTimeout(()=>b.remove(),8000);
+    }, i*100);
+  }
+
+  // HEART PETALS
+  for(let i=0;i<50;i++){
+    setTimeout(()=>{
+      const p = document.createElement("div");
+      p.className="petal";
+      p.innerHTML=['💕','💖','💗','💝'][Math.floor(Math.random()*4)];
+      p.style.left = (Math.random()*85+5)+"%";
+      p.style.top = "-30px";
+      stage.appendChild(p);
+      setTimeout(()=>p.remove(),7000);
+    }, i*150);
+  }
+
+  // CONFETTI
+  for(let i=0;i<100;i++){
+    setTimeout(()=>{
+      const c=document.createElement("div");
+      c.className="confetti";
+      c.style.left = (Math.random()*95)+"%";
+      c.style.top = "-30px";
+      c.style.setProperty('--c',["#ff69b4","#ff1493","#ffc0cb","#ff85c1","#ffb6c1"][Math.floor(Math.random()*5)]);
+      stage.appendChild(c);
+      setTimeout(()=>c.remove(),5000);
+    }, i*50);
+  }
+
+  // Birthday text
+  const txt = document.createElement("div");
+  txt.style.position="absolute";
+  txt.style.top="18%";
+  txt.style.left="50%";
+  txt.style.transform="translateX(-50%)";
+  txt.style.fontSize="32px";
+  txt.style.fontFamily="'Pacifico',cursive";
+  txt.style.color="#ffc4e8";
+  txt.style.textShadow="0 0 25px rgba(255,105,180,0.8)";
+  txt.innerHTML = "✨ Happy Birthday Divya ✨";
+  txt.style.opacity="0";
+  stage.appendChild(txt);
+
+  setTimeout(()=>{
+    txt.animate([
+      {opacity:0, transform:"translate(-50%,20px)"},
+      {opacity:1, transform:"translate(-50%,0px)"}
+    ],{duration:1000, fill:"forwards"});
+  }, 900);
+};
+
+/* --------------------------------------------------
+   GALLERY FULLSCREEN
+----------------------------------------------------*/
+const fs = document.createElement('div');
+fs.id="fs";
+fs.innerHTML=`<div class="fsClose" onclick="this.parentElement.style.display='none'">✖</div>
+              <img id="fsImg">`;
+document.body.appendChild(fs);
+
+document.querySelectorAll(".card").forEach(c=>{
+  c.onclick = function(){
+    document.getElementById("fsImg").src = this.dataset.src;
+    fs.style.display="flex";
+  }
+});
+
+/* --------------------------------------------------
+   MESSAGE CARD
+----------------------------------------------------*/
+const msgHeart = document.getElementById("msgHeart");
+const msgCard = document.getElementById("msgCard");
+const closeMsg = document.getElementById("closeMsg");
+
+msgHeart.onclick = ()=> msgCard.classList.add("show");
+closeMsg.onclick = ()=> msgCard.classList.remove("show");
+</script>
+
+</body>
+</html>
